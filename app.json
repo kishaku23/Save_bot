@@ -1,0 +1,41 @@
+{
+    "name": "Save-Restricted-Bot",
+    "description": "A Very Simple Telegram Restricted contents saving bot.",
+    "keywords": [
+        "telegram",
+        "files",
+        "bot"
+    ],
+    "repository": "https://github.com/Amanraj654/Save-Restricted-Bot",
+    "website": "https://github.com/Amanraj654/Save-Restricted-Bot",
+    "success_url": "https://t.me/Raj02_bots",
+    "env": {
+        "ID": {
+          "description": "Get this value from my.telegram.org",
+          "required": true
+        },
+        "HASH": {
+          "description": "Get this value from my.telegram.org",
+          "required": true
+        },
+        "TOKEN": {
+          "description": "Get this from @BotFather",
+          "required": true
+        },
+        "STRING": {
+          "description": "Your telegram account session. Get it from https://replit.com/@ClubFX/GenerateStringSession?v=1",
+          "required": true
+        }
+    },
+    "buildpacks": [
+        { 
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
