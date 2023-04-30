@@ -16,6 +16,19 @@
 # Deploy to Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/kishaku23/Save_restricted_bot)
 
+# Deploy to vps
+sudo apt update
+
+git clone your_repo_link
+
+cd Save_restricted_bot
+
+pip3 install -r requirements.txt
+
+python3 main.py
+
+Note:- use (nohup python3 main.py) to run 24×7
+
 # Usage
 
 __FOR PUBLIC CHATS__
