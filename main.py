@@ -1,6 +1,7 @@
 import pyrogram
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant, InviteHashExpired
+from pyrogram.types import Message
 
 import time
 import os
@@ -13,6 +14,10 @@ ss = os.environ.get("STRING", "")
 bot = Client("mybot",api_id=api_id,api_hash=api_hash,bot_token=bot_token)
 acc = Client("myacc",api_id=api_id,api_hash=api_hash,session_string=ss)
 
+
+@bot.on_message(filters.command(["start"]))
+async def account_login(bot: Client, m: Message):
+ editable = await m.reply_text("**I am a simple save restricted bot**.\n\nSend message link to clone/download here ")
 
 # download status
 def downstatus(statusfile,message):
