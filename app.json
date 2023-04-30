@@ -23,7 +23,7 @@
           "required": true
         },
         "STRING": {
-          "description": "Your telegram account session. Get it from https://replit.com/@ClubFX/GenerateStringSession?v=1",
+          "description": "Your telegram account session.  Get from @Venom_String_robot",
           "required": true
         }
     },
