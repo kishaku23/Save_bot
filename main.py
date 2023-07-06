@@ -17,7 +17,10 @@ acc = Client("myacc",api_id=api_id,api_hash=api_hash,session_string=ss)
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
- editable = await m.reply_text("**I am a simple save restricted bot**.\n\nSend message link to clone/download here ")
+ editable = await m.reply_text("**I am a simple save restricted bot**.\n\nSend message link to clone/download here\n Must join:- @Bypass_restricted")
+@bot.on_message(filters.command(["bulk"]))
+async def account_login(bot: Client, m: Message):
+ editable = await m.reply_text("**I am not an advanced bot")
 
 # download status
 def downstatus(statusfile,message):
@@ -68,11 +71,11 @@ def save(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
         try:
             with acc:
                 acc.join_chat(message.text)
-            bot.send_message(message.chat.id,"**Sorry Bro😔,this bot is not for private**", reply_to_message_id=message.id)
+            bot.send_message(message.chat.id,"**successfully join the chat**", reply_to_message_id=message.id)
         except UserAlreadyParticipant:
-            bot.send_message(message.chat.id,"**Sorry Bro😔,this bot is not for private**", reply_to_message_id=message.id)
+            bot.send_message(message.chat.id,"**successfully join the chat**", reply_to_message_id=message.id)
         except InviteHashExpired:
-            bot.send_message(message.chat.id,"**Sorry Bro😔,this bot is not for private**", reply_to_message_id=message.id)
+            bot.send_message(message.chat.id,"**link has expired.**", reply_to_message_id=message.id)
     
     # getting message
     elif "https://t.me/" in message.text:
